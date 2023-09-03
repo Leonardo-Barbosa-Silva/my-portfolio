@@ -1,4 +1,4 @@
-
+import leonardoLogo from '../img/leonardo-logo.png';
 
 const NavBar = () => {
 
@@ -6,7 +6,7 @@ const NavBar = () => {
         <header>
             <div className="container">
                 <div className="logo">
-                    <img src="../src/img/leonardo-logo.png" alt="leonardo developer logo"/>
+                    <img src={leonardoLogo} alt="leonardo developer logo"/>
                 </div>
                 <nav>
                     <ul>
