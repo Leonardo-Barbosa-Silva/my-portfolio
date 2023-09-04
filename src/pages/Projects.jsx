@@ -39,7 +39,9 @@ const Projects = () => {
                     >
                         <img src={todreams} alt="" />
                         <h2>Todreams App</h2>
-                        <p></p>
+                        <div className='description'>
+                            <p>An application to save your most important annotations.</p>
+                        </div>
                     </motion.div>
                     <motion.div
                         className='project'

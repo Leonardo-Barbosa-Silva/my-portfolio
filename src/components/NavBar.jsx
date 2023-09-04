@@ -11,10 +11,10 @@ const NavBar = () => {
                 <nav>
                     <ul>
                         <li><a href="#home">HOME</a></li>
-                        <li><a href="#home">ABOUT</a></li>
-                        <li><a href="#home">WORKS</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#works">WORKS</a></li>
                         <li><a href="#projects">PROJECTS</a></li>
-                        <li><a href="#home">CONTACT</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>

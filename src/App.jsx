@@ -3,6 +3,7 @@ import Entry from './pages/Entry';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Skills from './pages/Skills';
 
 
 const Container = styled.div`
@@ -16,10 +17,11 @@ function App() {
 
   return (
     <Container className='App'>
-      <Entry/>
-      <About/>
-      <Projects/>
-      <Contact/>
+      <Entry />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
     </Container>
   )
 }

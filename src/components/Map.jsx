@@ -15,7 +15,7 @@ const MapChart = () => {
       projectionConfig={{
         rotate: [70, -10, 0],
         center: [0, -15],
-        scale: 300
+        scale: 400
       }}
     >
       <Geographies
@@ -32,7 +32,7 @@ const MapChart = () => {
       </Geographies>
       <Annotation
         subject={[-48.633308, -21.550520]}
-        dx={-150}
+        dx={-90}
         dy={-20}
         connectorProps={{
           stroke: "#FFFFFF",

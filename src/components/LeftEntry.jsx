@@ -10,7 +10,7 @@ const LeftEntry = () => {
                 </div>
                 <p><br/>I'm a professional full stack developer <br/>who don't 
                 stop to learn, develop<br /> and improve my self knowledge.</p>
-                <button type="button">Learn more</button>
+                <a href="#about"><button type="button">Learn more</button></a>
             </div>
         </div>
     )
