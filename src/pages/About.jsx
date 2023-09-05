@@ -7,6 +7,7 @@ import Computer from '../components/Computer';
 const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
+  margin-bottom: 300px;
 `
 
 const About = () => {
@@ -28,13 +29,13 @@ const About = () => {
                     </div>
                 </div>
                 <div className='bottom'>
-                    <Canvas>
+                    <Canvas camera={{ position: [4, 0.8, 0] }}>
                         <ambientLight intensity={1} />
                         <directionalLight position={[1, 1, 1]} intensity={1} />
                         <pointLight position={[-1, -1, -1]} intensity={1} />
                         <OrbitControls enableZoom={false} />
-                        <group scale={[2, 2, 2]}>
-                            <Computer position={[-2, -4, -1.5]} />
+                        <group scale={[2, 1.5, 1.5]}>
+                            <Computer position={[-2, -3, -1]} />
                         </group>
                     </Canvas>
                 </div>

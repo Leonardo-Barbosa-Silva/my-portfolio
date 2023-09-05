@@ -8,6 +8,7 @@ const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
   position: relative;
+  margin-bottom: 100px;
 `
 
 const EntryContent = styled.div`

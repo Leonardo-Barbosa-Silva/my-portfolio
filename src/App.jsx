@@ -16,12 +16,15 @@ const Container = styled.div`
 function App() {
 
   return (
-    <Container className='App'>
+    <Container className='App' >
       <Entry />
       <About />
       <Skills />
       <Projects />
       <Contact />
+      <a href="#home" className='up'>
+        <button type='button'>&#10132;</button>
+      </a>
     </Container>
   )
 }

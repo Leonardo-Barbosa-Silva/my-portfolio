@@ -5,11 +5,13 @@ import todreams from '../img/todreams.png';
 
 const Section = styled.section`
   height: 100vh;
+  width: 100%;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 `
 
 const Projects = () => {
