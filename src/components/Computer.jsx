@@ -10,9 +10,10 @@ Title: Gaming Desktop PC
 
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import computerGLB from '../data/3d/computer-transformed.glb'
 
 export default function Computer(props) {
-  const { nodes, materials } = useGLTF('/computer-transformed.glb')
+  const { nodes, materials } = useGLTF(computerGLB)
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes.Cube_Material_0.geometry} material={materials.Material} position={[-0.61, -0.006, 1.561]} rotation={[-Math.PI / 2, 0, -Math.PI]} scale={[-3.689, 7.316, 0.26]} />
@@ -72,4 +73,4 @@ export default function Computer(props) {
   )
 }
 
-useGLTF.preload('/computer-transformed.glb')
+useGLTF.preload(computerGLB)
