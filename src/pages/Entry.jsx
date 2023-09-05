@@ -7,6 +7,7 @@ import RightEntry from '../components/RightEntry';
 const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
+  position: relative;
 `
 
 const EntryContent = styled.div`
@@ -24,6 +25,9 @@ const Entry = () => {
                 <LeftEntry />
                 <RightEntry />
             </EntryContent>
+            <div className='mouse'>
+                <div className='ball' />
+            </div>
         </Section>
     )
 }

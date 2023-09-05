@@ -115,54 +115,93 @@ button:hover
         margin-top: -20px
 
 
-.left.about
-    flex-direction: row
-    gap: 20px
+.mouse
+    position: absolute
+    width: 30px
+    height: 60px
+    border: 1px solid #fff
+    border-radius: 20px
+    bottom: 5%
+    left: 50%
+    display: flex
+    align-items: center
+    justify-content: center
 
-    h1
-        text-align: center
-        text-transform: uppercase
-    
-    h2
-        text-align: center
+    .ball
+        width: 20px
+        height: 20px
+        border-radius: 50%
+        background-color: #fff
+        animation: top-down-mouse 1s infinite ease alternate
 
-    span
-        font-size: 40px
-        font-family: variables.$title-font
-        color: variables.$secundary-color
 
-.line.title
+
+
+
+.container.about
+    width: 100%
     height: 100%
+    position: relative
+
+.top
+    width: 100%
+    height: 50%
+    position: absolute
+    margin: auto
+    top: 5%
     display: flex
     flex-direction: column
     align-items: center
-    justify-content: center
-    margin: 40px 0 0 30px
 
-    .ball
-        width: 30px
-        height: 30px
-        background-color: #006699
-        border-radius: 50%
+    h1
+        text-transform: uppercase
+        font-size: 60px
+    
+    h2
+        font-size: 50px
+        color: variables.$terciary-color
+        letter-spacing: 2px
+        margin-top: 10px
+
+    h3
+        text-transform: uppercase
+        font-size: 25px
+        color: variables.$secundary-color
+        letter-spacing: 1px
+
+    .subtitle
+        margin: 0
+        gap: 0
+        flex-direction: column
+
+.line-between
+    display: flex
+    align-items: center
+    gap: 20px
+
     .line
-        width: 8px
-        height: 80%
-        background-color: #006699
-        background-image: linear-gradient(to bottom, #006699 0%, #002244 30%, #000 100%)
-        margin-top: -2px
+        width: 200px
+        height: 4px
+        border-radius: 5px
+        background-color: variables.$secundary-color
+
+.bottom
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
 
 
 
 .container.skills
     width: 100%
-    height: 100%
-    display: grid
-    grid-template-columns: auto auto auto
-    align-items: center
+    height: 80%
+    display: flex
+    flex-wrap: wrap
 
     .skill
-        max-width: 100%
-        max-height: 100%
+        width: 200px
+        height: 200px
 
         canvas
             width: 100%
@@ -271,5 +310,11 @@ button:hover
 
 
 @keyframes top-down 
+    from
+        transform: translateY(-10px)
     to
         transform: translateY(50px)
+
+@keyframes top-down-mouse
+    to
+        transform: translateY(10px)
