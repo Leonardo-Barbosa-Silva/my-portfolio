@@ -33,7 +33,7 @@ const MapChart = () => {
       <Annotation
         subject={[-48.633308, -21.550520]}
         dx={-90}
-        dy={-20}
+        dy={-30}
         connectorProps={{
           stroke: "#FFFFFF",
           strokeWidth: 2,
