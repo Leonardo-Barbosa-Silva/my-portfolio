@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
 import styled from 'styled-components';
 import Computer from '../components/Computer';
+import { useEffect, useState } from 'react';
 
 
 const Section = styled.section`
@@ -10,7 +11,57 @@ const Section = styled.section`
   margin-bottom: 300px;
 `
 
+const services = [
+    "backend developer", 
+    "frontend developer", 
+    "full stack developer"
+]
+
 const About = () => {
+    const [ serviceIndex, setServiceIndex ] = useState(0)
+    const [ serviceSubIndex, setServiceSubIndex ] = useState(0)
+    const [ isWriting, setIsWriting ] = useState(true)
+    const [ output, setOutput ] = useState('')
+
+    useEffect( () => {
+        let timer;
+
+        if (serviceIndex >= services.length) {
+            setServiceIndex(0)
+            return
+        }
+        
+        if (isWriting && serviceSubIndex < services[serviceIndex].length) {
+            timer = setTimeout( () => {
+                setOutput( (prevOutput) => prevOutput + services[serviceIndex][serviceSubIndex] )
+                setServiceSubIndex( (prevServiceSubIndex) => prevServiceSubIndex + 1 )
+            }, 200)
+        }
+
+        if (isWriting && serviceSubIndex === services[serviceIndex].length) {
+            timer = setTimeout( () => {
+                setIsWriting(false)
+                setServiceIndex( (prevServiceIndex) => prevServiceIndex + 1 )
+                setTimeout(() => {}, 3000)
+            }, 3000)
+        }
+
+        if (!isWriting && serviceSubIndex > 0) {
+            timer = setTimeout( () => {
+                setOutput( (prevOutput) => prevOutput.substring(0, prevOutput.length - 1) )
+                setServiceSubIndex( (prevServiceSubIndex) => prevServiceSubIndex - 1 )
+            }, 50)
+        }
+
+        if (!isWriting && serviceSubIndex === 0) {
+            setIsWriting(true)
+            setOutput(services[serviceIndex][0])
+            setServiceSubIndex(1)
+        }
+
+        return () => clearTimeout(timer)
+
+    }, [isWriting, serviceSubIndex, serviceIndex])
 
     return (
         <Section id="about">
@@ -24,12 +75,12 @@ const About = () => {
                                 <h3>A Science Computer student and</h3>
                                 <div className='line' />
                             </div>
-                            <h2>Full Stack developer</h2>
+                            <h2>{output}</h2>
                         </div>
                     </div>
                 </div>
                 <div className='bottom'>
-                    <Canvas camera={{ position: [4, 0.8, 0] }}>
+                    <Canvas camera={{ position: [4, -1, 0] }}>
                         <ambientLight intensity={1} />
                         <directionalLight position={[1, 1, 1]} intensity={1} />
                         <pointLight position={[-1, -1, -1]} intensity={1} />
