@@ -25,6 +25,8 @@ const Section = styled.section`
     scroll-snap-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 `
 
 const Ball = ({ icon }) => {
@@ -58,84 +60,91 @@ const Skills = () => {
 
     return (
         <Section id='skills'>
-            <div className='title'>
-                <div className='line'/>
-                <h1>Some Skills</h1>
-                <div className='line'/>
-                <div />
+            <div className='navigation'>
+                <nav>
+                    <ul>
+                        <li>projects</li>
+                        <li>skills</li>
+                        <li>experiences</li>
+                    </ul>
+                </nav>
             </div>
-            <div className='container skills'>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={javascript} />
-                    </Canvas>
+            <div className='slide'>
+                <div className='slider'>
+                    <div className='container skills'>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={javascript} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={typescript} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={nodejs} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={python} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={git} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={html} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={css} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={react} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={redux} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={material} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={sass} />
+                        </Canvas>
+                    </div>
+                    <div className='skill'>
+                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                            <OrbitControls enableZoom={false} />
+                            <Ball icon={mongodb} />
+                        </Canvas>
+                    </div>
                 </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={typescript} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={nodejs} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={python} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={git} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={html} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={css} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={react} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={redux} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={material} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={sass} />
-                    </Canvas>
-                </div>
-                <div className='skill'>
-                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={mongodb} />
-                    </Canvas>
                 </div>
             </div>
         </Section>
