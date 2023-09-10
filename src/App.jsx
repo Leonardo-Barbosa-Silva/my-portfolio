@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Entry from './pages/Entry';
 import About from './pages/About';
-import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Skills from './pages/Skills';
 
@@ -20,7 +19,6 @@ function App() {
       <Entry />
       <About />
       <Skills />
-      <Projects />
       <Contact />
       <a href="#home" className='up'>
         <button type='button'>&#10132;</button>
