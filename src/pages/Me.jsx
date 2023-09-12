@@ -17,6 +17,8 @@ import redux from '../img/redux.png'
 import sass from '../img/sass.svg'
 import mongodb from '../img/mongodb.png'
 import material from '../img/material.svg'
+import express from '../img/express.png'
+import next from '../img/next.png'
 import { motion } from 'framer-motion';
 import universe from '../img/universe.jpg';
 import { useEffect, useState } from 'react';
@@ -69,8 +71,8 @@ const Skills = () => {
         const rect = e.currentTarget.getBoundingClientRect()
         const x = e.clientX - rect.left
         const y = e.clientY - rect.top
-        const rotateX = ((y / rect.height) - 0.5) * 40
-        const rotateY = ((x / rect.width) - 0.5) * -40
+        const rotateX = ((y / rect.height) - 0.5) * 70
+        const rotateY = ((x / rect.width) - 0.5) * -70
         e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
     }
 
@@ -98,7 +100,7 @@ const Skills = () => {
 
 
     return (
-        <Section id='skills'>
+        <Section id='me'>
             <div className='navigation'>
                 <nav>
                     <ul>
@@ -132,44 +134,52 @@ const Skills = () => {
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <img src={universe} alt=""/>
-                                <div className='description'>
-                                    <h2>Todreams App</h2>
-                                    <p>An application to save your most important annotations.</p>
-                                </div>
+                                <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                    <img src={universe} alt=""/>
+                                    <div className='description'>
+                                        <h2>Todreams App</h2>
+                                        <p>An application to save your most important annotations.</p>
+                                    </div>
+                                </a>
                             </motion.div>
                             <motion.div
                                 className='project'
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <img src={universe} alt=""/>
-                                <div className='description'>
-                                    <h2>Netflix Clone</h2>
-                                    <p>An application to save your most important annotations.</p>
-                                </div>
+                                <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                    <img src={universe} alt=""/>
+                                    <div className='description'>
+                                        <h2>Netflix Clone</h2>
+                                        <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
+                                    </div>
+                                </a>
                             </motion.div>
                             <motion.div
                                 className='project'
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <img src={universe} alt=""/>
-                                <div className='description'>
-                                    <h2>Haircut Website</h2>
-                                    <p>An application to save your most important annotations.</p>
-                                </div>
+                                <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                    <img src={universe} alt=""/>
+                                    <div className='description'>
+                                        <h2>Haircut Website</h2>
+                                        <p>A great template of Barber Shop website.</p>
+                                    </div>
+                                </a>
                             </motion.div>
                             <motion.div
                                 className='project'
                                 onMouseMove={handleMouseMove}
                                 onMouseLeave={handleMouseLeave}
                             >
-                                <img src={universe} alt=""/>
-                                <div className='description'>
-                                    <h2>Shop Skills</h2>
-                                    <p>An application to save your most important annotations.</p>
-                                </div>
+                                <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                    <img src={universe} alt=""/>
+                                    <div className='description'>
+                                        <h2>Shop Skills</h2>
+                                        <p>A simple project developed by using React, Webpack and Babel manually.</p>
+                                    </div>
+                                </a>
                             </motion.div>
                         </div>
                     </div>
@@ -191,6 +201,12 @@ const Skills = () => {
                             <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
                                 <OrbitControls enableZoom={false} />
                                 <Ball icon={nodejs} />
+                            </Canvas>
+                        </div>
+                        <div className='skill'>
+                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                <OrbitControls enableZoom={false} />
+                                <Ball icon={express} />
                             </Canvas>
                         </div>
                         <div className='skill'>
@@ -238,6 +254,12 @@ const Skills = () => {
                         <div className='skill'>
                             <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
                                 <OrbitControls enableZoom={false} />
+                                <Ball icon={next} />
+                            </Canvas>
+                        </div>
+                        <div className='skill'>
+                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                <OrbitControls enableZoom={false} />
                                 <Ball icon={sass} />
                             </Canvas>
                         </div>
@@ -248,6 +270,11 @@ const Skills = () => {
                             </Canvas>
                         </div>
                     </div>
+
+                    <div className='container experience'>
+
+                    </div>
+
                 </div>
             </div>
         </Section>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Entry from './pages/Entry';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Skills from './pages/Skills';
+import Me from './pages/Me';
 
 
 const Container = styled.div`
@@ -18,7 +18,7 @@ function App() {
     <Container className='App' >
       <Entry />
       <About />
-      <Skills />
+      <Me />
       <Contact />
       <a href="#home" className='up'>
         <button type='button'>&#10132;</button>
