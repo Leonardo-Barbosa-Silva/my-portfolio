@@ -19,12 +19,14 @@ const EntryContent = styled.div`
 
 const Entry = () => {
 
+    const isNonMobileScreen = window.matchMedia('(min-width: 1000px)').matches
+
     return (
         <Section id="home">
             <NavBar />
             <EntryContent>
-                <LeftEntry />
-                <RightEntry />
+                <LeftEntry isNonMobileScreen={isNonMobileScreen}/>
+                <RightEntry isNonMobileScreen={isNonMobileScreen}/>
             </EntryContent>
             <div className='mouse'>
                 <div className='ball' />

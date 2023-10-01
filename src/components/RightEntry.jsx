@@ -2,12 +2,12 @@ import ShpereDistort from "./SphereDistort";
 import astronaut from '../img/astronaut.png';
 
 
-const RightEntry = () => {
+const RightEntry = ({ isNonMobileScreen }) => {
 
     return (
         <div className='right'>
 
-            <ShpereDistort />
+            <ShpereDistort isNonMobileScreen={isNonMobileScreen} />
             
             <img src={astronaut} alt="animation astronaut moving to top and down" />
         </div>

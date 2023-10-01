@@ -64,6 +64,7 @@ const Ball = ({ icon }) => {
 const Skills = () => {
 
     const [ currentSlide, setCurrentSlide ] = useState('projects')
+    const [ transformValue, setTransformValue ] = useState('transformX(0)')
 
     const handleMouseMove = (e) => {
         const descriptionElement = e.currentTarget.querySelector('.description')
@@ -95,8 +96,8 @@ const Skills = () => {
     }
 
     useEffect( () => {
-        sliderTransform()
-    }, [clickNav])
+        setTransformValue(sliderTransform())
+    }, [currentSlide])
 
 
     return (
@@ -126,7 +127,7 @@ const Skills = () => {
                 </nav>
             </div>
             <div className='slide'>
-                <div className='slider' style={{transform: sliderTransform()}}>
+                <div className='slider' style={{transform: transformValue}} >
                     <div className="container projects">
                         <div className='grid-1'>
                             <motion.div
