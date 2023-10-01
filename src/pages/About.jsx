@@ -120,8 +120,8 @@ const About = () => {
                                 <directionalLight position={[1, 1, 1]} intensity={1} />
                                 <pointLight position={[-1, -1, -1]} intensity={1} />
                                 <OrbitControls enableZoom={false} />
-                                <group scale={[1.4, 0.8, 0.8]}>
-                                    <Computer position={[-2, -3, -1]} />
+                                <group scale={[0.9, 0.6, 0.4]}>
+                                    <Computer position={[-3, -1, -2]} />
                                 </group>
                             </Canvas>
                         </div>
