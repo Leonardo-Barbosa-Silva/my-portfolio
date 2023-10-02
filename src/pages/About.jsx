@@ -133,7 +133,7 @@ const About = () => {
                                 width: '30px',
                                 height: '30px',
                                 right: '2%',
-                                bottom: '40%'
+                                bottom: '50%'
                             }}
                         />
                     </div>
