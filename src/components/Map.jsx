@@ -9,42 +9,87 @@ import {
 import features from '../features.json';
 
 const MapChart = () => {
+
+  const isSmallScreen = window.matchMedia('(max-width: 800px)').matches
+
   return (
-    <ComposableMap
-      projection="geoAzimuthalEqualArea"
-      projectionConfig={{
-        rotate: [70, -10, 0],
-        center: [0, -15],
-        scale: 400
-      }}
-    >
-      <Geographies
-        geography={features}
-        fill="#001122"
-        stroke="#FFFFFF"
-        strokeWidth={0.4}
-      >
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
-      </Geographies>
-      <Annotation
-        subject={[-48.633308, -21.550520]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "#FFFFFF",
-          strokeWidth: 2,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#FFFFFF">
-          {"Me"}
-        </text>
-      </Annotation>
-    </ComposableMap>
+    <>
+      {!isSmallScreen && (
+        <ComposableMap
+          projection="geoAzimuthalEqualArea"
+          projectionConfig={{
+            rotate: [70, -10, 0],
+            center: [0, -15],
+            scale: 400
+          }}
+        >
+          <Geographies
+            geography={features}
+            fill="#001122"
+            stroke="#FFFFFF"
+            strokeWidth={0.4}
+          >
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography key={geo.rsmKey} geography={geo} />
+              ))
+            }
+          </Geographies>
+          <Annotation
+            subject={[-48.633308, -21.550520]}
+            dx={-90}
+            dy={-30}
+            connectorProps={{
+              stroke: "#FFFFFF",
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }}
+          >
+            <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#FFFFFF">
+              {"Me"}
+            </text>
+          </Annotation>
+        </ComposableMap>
+      )}
+
+      {isSmallScreen && (
+        <ComposableMap
+          projection="geoAzimuthalEqualArea"
+          projectionConfig={{
+            rotate: [90, -12, 5],
+            center: [0, -5],
+            scale: 450
+          }}
+        >
+          <Geographies
+            geography={features}
+            fill="#001122"
+            stroke="#FFFFFF"
+            strokeWidth={0.4}
+          >
+            {({ geographies }) =>
+              geographies.map((geo) => (
+                <Geography key={geo.rsmKey} geography={geo} />
+              ))
+            }
+          </Geographies>
+          <Annotation
+            subject={[-48.633308, -21.550520]}
+            dx={-90}
+            dy={-30}
+            connectorProps={{
+              stroke: "#FFFFFF",
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }}
+          >
+            <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#FFFFFF">
+              {"Me"}
+            </text>
+          </Annotation>
+        </ComposableMap>
+      )}
+    </>
   );
 };
 
