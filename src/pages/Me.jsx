@@ -22,7 +22,9 @@ import next from '../img/next.png'
 import tailwind from '../img/tailwind.png'
 import docker from '../img/docker.png'
 import vuejs from '../img/vuejs.png'
+import universe from '../img/universe.jpg'
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
     width: 100%;
@@ -137,38 +139,58 @@ const Skills = () => {
                             <div className='slider' style={{transform: transformValue}} >
                                 <div className="container projects">
                                     <div className='grid-1'>
-                                        <div className='project'>
+                                        <motion.div
+                                            className='project'
+                                            onMouseMove={handleMouseMove}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
                                             <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Todreams App</h2>
                                                     <p>An application to save your most important annotations.</p>
                                                 </div>
                                             </a>
-                                        </div>
-                                        <div className='project'>
+                                        </motion.div>
+                                        <motion.div
+                                            className='project'
+                                            onMouseMove={handleMouseMove}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
                                             <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Netflix Clone</h2>
                                                     <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
                                                 </div>
                                             </a>
-                                        </div>
-                                        <div className='project'>
+                                        </motion.div>
+                                        <motion.div
+                                            className='project'
+                                            onMouseMove={handleMouseMove}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
                                             <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Haircut Website</h2>
                                                     <p>A great template of Barber Shop website.</p>
                                                 </div>
                                             </a>
-                                        </div>
-                                        <div className='project'>
+                                        </motion.div>
+                                        <motion.div
+                                            className='project'
+                                            onMouseMove={handleMouseMove}
+                                            onMouseLeave={handleMouseLeave}
+                                        >
                                             <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Shop Skills</h2>
                                                     <p>A simple project developed by using React, Webpack and Babel manually.</p>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </motion.div>
                                     </div>
                                 </div>
 
