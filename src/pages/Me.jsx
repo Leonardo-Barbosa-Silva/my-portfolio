@@ -100,184 +100,342 @@ const Skills = () => {
     }, [currentSlide])
 
 
+    const isNonMobileScreen = window.matchMedia('(min-width: 1000px)').matches
+
+
     return (
         <Section id='me'>
-            <div className='navigation'>
-                <nav>
-                    <ul>
-                        <li 
-                            className={currentSlide === 'projects' ? 'active' : ''} 
-                            onClick={() => clickNav('projects')}
-                        >
-                            projects
-                        </li>
-                        <li 
-                            className={currentSlide === 'skills' ? 'active' : ''}
-                            onClick={() => clickNav('skills')}
-                        >
-                            skills
-                        </li>
-                        <li
-                            className={currentSlide === 'experiences' ? 'active' : ''}
-                            onClick={() => clickNav('experiences')}
-                        >
-                            experiences
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-            <div className='slide'>
-                <div className='slider' style={{transform: transformValue}} >
-                    <div className="container projects">
-                        <div className='grid-1'>
-                            <motion.div
-                                className='project'
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                    <img src={universe} alt=""/>
-                                    <div className='description'>
-                                        <h2>Todreams App</h2>
-                                        <p>An application to save your most important annotations.</p>
+            <>
+                {isNonMobileScreen && (
+                    <>
+                        <div className='navigation'>
+                            <nav>
+                                <ul>
+                                    <li 
+                                        className={currentSlide === 'projects' ? 'active' : ''} 
+                                        onClick={() => clickNav('projects')}
+                                    >
+                                        projects
+                                    </li>
+                                    <li 
+                                        className={currentSlide === 'skills' ? 'active' : ''}
+                                        onClick={() => clickNav('skills')}
+                                    >
+                                        skills
+                                    </li>
+                                    <li
+                                        className={currentSlide === 'experiences' ? 'active' : ''}
+                                        onClick={() => clickNav('experiences')}
+                                    >
+                                        experiences
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div className='slide'>
+                            <div className='slider' style={{transform: transformValue}} >
+                                <div className="container projects">
+                                    <div className='grid-1'>
+                                        <div className='project'>
+                                            <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Todreams App</h2>
+                                                    <p>An application to save your most important annotations.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Netflix Clone</h2>
+                                                    <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Haircut Website</h2>
+                                                    <p>A great template of Barber Shop website.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Shop Skills</h2>
+                                                    <p>A simple project developed by using React, Webpack and Babel manually.</p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </a>
-                            </motion.div>
-                            <motion.div
-                                className='project'
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                    <img src={universe} alt=""/>
-                                    <div className='description'>
-                                        <h2>Netflix Clone</h2>
-                                        <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
+                                </div>
+
+                                <div className='container skills'>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={javascript} />
+                                        </Canvas>
                                     </div>
-                                </a>
-                            </motion.div>
-                            <motion.div
-                                className='project'
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                    <img src={universe} alt=""/>
-                                    <div className='description'>
-                                        <h2>Haircut Website</h2>
-                                        <p>A great template of Barber Shop website.</p>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={typescript} />
+                                        </Canvas>
                                     </div>
-                                </a>
-                            </motion.div>
-                            <motion.div
-                                className='project'
-                                onMouseMove={handleMouseMove}
-                                onMouseLeave={handleMouseLeave}
-                            >
-                                <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                    <img src={universe} alt=""/>
-                                    <div className='description'>
-                                        <h2>Shop Skills</h2>
-                                        <p>A simple project developed by using React, Webpack and Babel manually.</p>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={nodejs} />
+                                        </Canvas>
                                     </div>
-                                </a>
-                            </motion.div>
-                        </div>
-                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={express} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={python} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={git} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={html} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={css} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={react} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={redux} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={material} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={next} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={sass} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={mongodb} />
+                                        </Canvas>
+                                    </div>
+                                </div>
 
-                    <div className='container skills'>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={javascript} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={typescript} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={nodejs} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={express} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={python} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={git} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={html} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={css} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={react} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={redux} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={material} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={next} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={sass} />
-                            </Canvas>
-                        </div>
-                        <div className='skill'>
-                            <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                <OrbitControls enableZoom={false} />
-                                <Ball icon={mongodb} />
-                            </Canvas>
-                        </div>
-                    </div>
+                                <div className='container experience'>
 
-                    <div className='container experience'>
+                                </div>
 
-                    </div>
+                            </div>
+                        </div>
+                    </>
+                )}
 
-                </div>
-            </div>
+                {!isNonMobileScreen && (
+                    <>
+                        <div className='navigation'>
+                            <nav>
+                                <ul>
+                                    <li 
+                                        className={currentSlide === 'projects' ? 'active' : ''} 
+                                        onClick={() => clickNav('projects')}
+                                    >
+                                        projects
+                                    </li>
+                                    <li 
+                                        className={currentSlide === 'skills' ? 'active' : ''}
+                                        onClick={() => clickNav('skills')}
+                                    >
+                                        skills
+                                    </li>
+                                    <li
+                                        className={currentSlide === 'experiences' ? 'active' : ''}
+                                        onClick={() => clickNav('experiences')}
+                                    >
+                                        experiences
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div className='slide'>
+                            <div className='slider' style={{transform: transformValue}} >
+                                <div className="container projects">
+                                    <div className='grid-1'>
+                                        <div className='project'>
+                                            <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Todreams App</h2>
+                                                    <p>An application to save your most important annotations.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Netflix Clone</h2>
+                                                    <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Haircut Website</h2>
+                                                    <p>A great template of Barber Shop website.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div className='project'>
+                                            <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
+                                                <img src={universe} alt=""/>
+                                                <div className='description'>
+                                                    <h2>Shop Skills</h2>
+                                                    <p>A simple project developed by using React, Webpack and Babel manually.</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className='container skills'>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={javascript} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={typescript} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={nodejs} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={express} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={python} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={git} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={html} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={css} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={react} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={redux} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={material} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={next} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={sass} />
+                                        </Canvas>
+                                    </div>
+                                    <div className='skill'>
+                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                                            <OrbitControls enableZoom={false} />
+                                            <Ball icon={mongodb} />
+                                        </Canvas>
+                                    </div>
+                                </div>
+
+                                <div className='container experience'>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </>
+                )}
+            </>
         </Section>
     )
 }
