@@ -56,9 +56,9 @@ const MapChart = () => {
         <ComposableMap
           projection="geoAzimuthalEqualArea"
           projectionConfig={{
-            rotate: [90, -12, 5],
+            rotate: [100, 15, 5],
             center: [0, -5],
-            scale: 450
+            scale: 420
           }}
         >
           <Geographies
@@ -75,8 +75,8 @@ const MapChart = () => {
           </Geographies>
           <Annotation
             subject={[-48.633308, -21.550520]}
-            dx={-90}
-            dy={-30}
+            dx={-20}
+            dy={-70}
             connectorProps={{
               stroke: "#FFFFFF",
               strokeWidth: 2,

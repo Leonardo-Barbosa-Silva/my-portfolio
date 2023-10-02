@@ -545,14 +545,18 @@ button:hover
 @media screen and (max-width: 800px) 
     header
         .logo
-            width: 100px
-            height: 100px
+            width: 90px
+            height: 90px
         ul
             font-size: 12px
+
+    #home .mouse
+        bottom: 7%
 
     #about 
         .container.about
             align-items: flex-start
+            position: relative
 
         .title
             display: flex
@@ -579,7 +583,9 @@ button:hover
         .bottom
             height: 70%
             width: 80%
-            margin-left: 10px
+
+        img
+            animation: top-down 1s infinite alternate
 
     #contact 
         .left.contact

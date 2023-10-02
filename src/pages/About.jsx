@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
 import styled from 'styled-components';
 import Computer from '../components/Computer';
+import toque from '../img/toque.png';
 import { useEffect, useState } from 'react';
 
 
@@ -121,10 +122,20 @@ const About = () => {
                                 <pointLight position={[-1, -1, -1]} intensity={1} />
                                 <OrbitControls enableZoom={false} />
                                 <group scale={[0.9, 0.6, 0.4]}>
-                                    <Computer position={[-3, -1, -2]} />
+                                    <Computer position={[-6, -1, -2]} />
                                 </group>
                             </Canvas>
                         </div>
+                        <img
+                            src={toque} alt=""
+                            style={{
+                                position: 'absolute',
+                                width: '30px',
+                                height: '30px',
+                                right: '2%',
+                                bottom: '40%'
+                            }}
+                        />
                     </div>
                 </Section>
             )}
