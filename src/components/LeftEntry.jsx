@@ -1,4 +1,4 @@
-const LeftEntry = ({ isNonMobileScreen }) => {
+const LeftEntry = ({ isSmallScreen }) => {
 
     return (
         <div className='left'>
