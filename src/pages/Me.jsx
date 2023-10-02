@@ -19,8 +19,9 @@ import mongodb from '../img/mongodb.png'
 import material from '../img/material.svg'
 import express from '../img/express.png'
 import next from '../img/next.png'
-import { motion } from 'framer-motion';
-import universe from '../img/universe.jpg';
+import tailwind from '../img/tailwind.png'
+import docker from '../img/docker.png'
+import vuejs from '../img/vuejs.png'
 import { useEffect, useState } from 'react';
 
 const Section = styled.section`
@@ -138,7 +139,6 @@ const Skills = () => {
                                     <div className='grid-1'>
                                         <div className='project'>
                                             <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Todreams App</h2>
                                                     <p>An application to save your most important annotations.</p>
@@ -147,7 +147,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Netflix Clone</h2>
                                                     <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
@@ -156,7 +155,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Haircut Website</h2>
                                                     <p>A great template of Barber Shop website.</p>
@@ -165,7 +163,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Shop Skills</h2>
                                                     <p>A simple project developed by using React, Webpack and Babel manually.</p>
@@ -176,7 +173,7 @@ const Skills = () => {
                                 </div>
 
                                 <div className='container skills'>
-                                    <div className='skill'>
+                                <div className='skill'>
                                         <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
                                             <OrbitControls enableZoom={false} />
                                             <Ball icon={javascript} />
@@ -303,7 +300,6 @@ const Skills = () => {
                                     <div className='grid-1'>
                                         <div className='project'>
                                             <a href='https://todreams-frontend.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Todreams App</h2>
                                                     <p>An application to save your most important annotations.</p>
@@ -312,7 +308,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://netflix-clone-react-qt36.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Netflix Clone</h2>
                                                     <p>The best Netflix Clone frontend made by using React and TheMovieDB API.</p>
@@ -321,7 +316,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://haircut.onrender.com' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Haircut Website</h2>
                                                     <p>A great template of Barber Shop website.</p>
@@ -330,7 +324,6 @@ const Skills = () => {
                                         </div>
                                         <div className='project'>
                                             <a href='https://shop-skills-react.onrender.com/' target='_blank' rel='noreferrer noopener'>
-                                                <img src={universe} alt=""/>
                                                 <div className='description'>
                                                     <h2>Shop Skills</h2>
                                                     <p>A simple project developed by using React, Webpack and Babel manually.</p>
@@ -342,88 +335,52 @@ const Skills = () => {
 
                                 <div className='container skills'>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={javascript} />
-                                        </Canvas>
+                                        <img src={javascript} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={typescript} />
-                                        </Canvas>
+                                        <img src={typescript} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={nodejs} />
-                                        </Canvas>
+                                        <img src={nodejs} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={express} />
-                                        </Canvas>
+                                        <img src={python} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={python} />
-                                        </Canvas>
+                                        <img src={git} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={git} />
-                                        </Canvas>
+                                        <img src={html} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={html} />
-                                        </Canvas>
+                                        <img src={css} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={css} />
-                                        </Canvas>
+                                        <img src={react} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={react} />
-                                        </Canvas>
+                                        <img src={redux} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={redux} />
-                                        </Canvas>
+                                        <img src={material} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={material} />
-                                        </Canvas>
+                                        <img src={next} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={next} />
-                                        </Canvas>
+                                        <img src={sass} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={sass} />
-                                        </Canvas>
+                                        <img src={tailwind} alt=""/>
                                     </div>
                                     <div className='skill'>
-                                        <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                                            <OrbitControls enableZoom={false} />
-                                            <Ball icon={mongodb} />
-                                        </Canvas>
+                                        <img src={vuejs} alt=""/>
+                                    </div>
+                                    <div className='skill'>
+                                        <img src={docker} alt=""/>
+                                    </div>
+                                    <div className='skill'>
+                                        <img src={mongodb} alt=""/>
                                     </div>
                                 </div>
 
