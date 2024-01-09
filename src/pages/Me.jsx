@@ -3,45 +3,6 @@ import { Decal, OrbitControls, useTexture } from "@react-three/drei";
 import styled from "styled-components";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import javascript from "../img/javascript.png";
-import nodejs from "../img/nodejs.png";
-import git from "../img/git.png";
-import css from "../img/css.png";
-import html from "../img/html.png";
-import typescript from "../img/typescript.png";
-import react from "../img/reactjs.png";
-import python from "../img/python.svg";
-import redux from "../img/redux.png";
-import sass from "../img/sass.svg";
-import mongodb from "../img/mongodb.png";
-import material from "../img/material.svg";
-import express from "../img/express.png";
-import next from "../img/next.png";
-import tailwind from "../img/tailwind.png";
-import docker from "../img/docker.png";
-import vuejs from "../img/vuejs.png";
-import universe from "../img/universe.jpg";
-
-const imgSkills = [
-    javascript,
-    nodejs,
-    typescript,
-    html,
-    css,
-    git,
-    universe,
-    vuejs,
-    docker,
-    tailwind,
-    next,
-    express,
-    material,
-    mongodb,
-    sass,
-    redux,
-    python,
-    react
-]
 
 const Section = styled.section`
   width: 100%;
@@ -235,14 +196,90 @@ const Skills = () => {
                 </div>
 
                 <div className="container skills">
-                  {imgSkills.map( imgSkill => (
-                      <div className="skill">
-                      <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
-                        <OrbitControls enableZoom={false} />
-                        <Ball icon={imgSkill} />
-                      </Canvas>
-                    </div>
-                  ))}
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={javascript} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={typescript} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={nodejs} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={express} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={python} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={git} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={html} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={css} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={react} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={redux} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={material} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={next} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={sass} />
+                    </Canvas>
+                  </div>
+                  <div className="skill">
+                    <Canvas camera={{ fov: 40, position: [0, 0, 5] }}>
+                      <OrbitControls enableZoom={false} />
+                      <Ball icon={mongodb} />
+                    </Canvas>
+                  </div>
                 </div>
 
                 <div className="container experience"></div>
@@ -318,11 +355,54 @@ const Skills = () => {
                 </div>
 
                 <div className="container skills">
-                  {imgSkills.map( imgSkill => (
-                    <div className="skill">
-                      <img src={imgSkill} alt="" />
-                    </div>
-                  ))}
+                  <div className="skill">
+                    <img src={javascript} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={typescript} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={nodejs} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={python} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={git} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={html} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={css} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={react} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={redux} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={material} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={next} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={sass} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={tailwind} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={vuejs} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={docker} alt="" />
+                  </div>
+                  <div className="skill">
+                    <img src={mongodb} alt="" />
+                  </div>
                 </div>
 
                 <div className="container experience"></div>
