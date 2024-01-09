@@ -67,62 +67,46 @@ const About = () => {
     const isNonMobileScreen = window.matchMedia('(min-width: 1000px)').matches
 
     return (
-        <>
-            {isNonMobileScreen && (
-                <Section id="about">
-                    <div className='container about'>
-                        <div className='top'>
-                            <div className='title'>
-                                <h1>Hi, I'm Leonardo Barbosa Silva</h1>
-                                <div className='subtitle'>
-                                    <div className='line-between'>
-                                        <div className='line' />
-                                        <h3>A Science Computer student and</h3>
-                                        <div className='line' />
-                                    </div>
-                                    <h2>{output}</h2>
-                                </div>
+        <Section id="about">
+            <div className='container about'>
+                <div className='top'>
+                    <div className='title'>
+                        <h1>Hi, I'm Leonardo Barbosa Silva</h1>
+                        <div className='subtitle'>
+                            <div className='line-between'>
+                                <div className='line' />
+                                <h3>A Science Computer student and</h3>
+                                <div className='line' />
                             </div>
-                        </div>
-                        <div className='bottom'>
-                            <Canvas camera={{ position: [4, -1, 0] }}>
-                                <ambientLight intensity={1} />
-                                <directionalLight position={[1, 1, 1]} intensity={1} />
-                                <pointLight position={[-1, -1, -1]} intensity={1} />
-                                <OrbitControls enableZoom={false} />
-                                <group scale={[2, 1.5, 1.5]}>
-                                    <Computer position={[-2, -3, -1]} />
-                                </group>
-                            </Canvas>
+                            <h2>{output}</h2>
                         </div>
                     </div>
-                </Section>
-            )}
+                </div>
 
-            {!isNonMobileScreen && (
-                <Section id="about">
-                    <div className='container about'>
-                        <div className='top'>
-                            <div className='title'>
-                                <h1>Hi, I'm Leonardo Barbosa Silva</h1>
-                                <div className='subtitle'>
-                                    <div className='line-between'>
-                                        <div className='line' />
-                                        <h3>A Science Computer student and</h3>
-                                        <div className='line' />
-                                    </div>
-                                    <h2>{output}</h2>
-                                </div>
-                            </div>
-                        </div>
+                {isNonMobileScreen && (
+                    <div className='bottom'>
+                        <Canvas camera={{ position: [4, -1, 0] }}>
+                            <ambientLight intensity={1} />
+                            <directionalLight position={[1, 1, 1]} intensity={1} />
+                            <pointLight position={[-1, -1, -1]} intensity={1} />
+                            <OrbitControls enableZoom={false} />
+                            <group scale={[2, 1.5, 1.5]}>
+                                <Computer position={[-2, -3, -1]} />
+                            </group>
+                        </Canvas>
+                    </div>
+                )}
+
+                {!isNonMobileScreen && (
+                    <>
                         <div className='bottom'>
                             <Canvas camera={{ position: [4, -1, 0] }}>
                                 <ambientLight intensity={1} />
                                 <directionalLight position={[1, 1, 1]} intensity={1} />
-                                <pointLight position={[-1, -1, -1]} intensity={1} />
+                                <pointLight position={[-1, 4, -1]} intensity={1} />
                                 <OrbitControls enableZoom={false} />
-                                <group scale={[0.9, 0.6, 0.4]}>
-                                    <Computer position={[-6, -1, -2]} />
+                                <group scale={[0.6, 0.5, 0.4]}>
+                                    <Computer position={[-5, -1, -2]} />
                                 </group>
                             </Canvas>
                         </div>
@@ -136,10 +120,10 @@ const About = () => {
                                 bottom: '50%'
                             }}
                         />
-                    </div>
-                </Section>
-            )}
-        </>
+                    </>
+                )}
+                </div>
+        </Section>
     )
 }
 
