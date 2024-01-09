@@ -1,6 +1,24 @@
 import { Canvas } from "@react-three/fiber";
 import { Decal, OrbitControls, useTexture } from "@react-three/drei";
 import styled from "styled-components";
+import javascript from "../img/javascript.png";
+import nodejs from "../img/nodejs.png";
+import git from "../img/git.png";
+import css from "../img/css.png";
+import html from "../img/html.png";
+import typescript from "../img/typescript.png";
+import react from "../img/reactjs.png";
+import python from "../img/python.svg";
+import redux from "../img/redux.png";
+import sass from "../img/sass.svg";
+import mongodb from "../img/mongodb.png";
+import material from "../img/material.svg";
+import express from "../img/express.png";
+import next from "../img/next.png";
+import tailwind from "../img/tailwind.png";
+import docker from "../img/docker.png";
+import vuejs from "../img/vuejs.png";
+import universe from "../img/universe.jpg";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
